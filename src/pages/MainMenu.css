@@ -1,0 +1,90 @@
+.main-menu-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.welcome-block {
+  text-align: center;
+  padding: 16px;
+  margin-bottom: 8px;
+}
+
+.welcome-block h2 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: var(--tg-theme-text-color, #000000);
+}
+
+.welcome-block p {
+  font-size: 16px;
+  color: var(--tg-theme-hint-color, #999999);
+}
+
+.sections-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.section-card {
+  display: flex;
+  align-items: center;
+  background-color: var(--tg-theme-bg-color, #ffffff);
+  border-left: 4px solid;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.section-card:active {
+  transform: scale(0.98);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.section-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin-right: 16px;
+  flex-shrink: 0;
+}
+
+.section-info {
+  flex: 1;
+}
+
+.section-info h3 {
+  margin: 0 0 4px 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.section-info p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--tg-theme-hint-color, #999999);
+}
+
+/* Анимация появления элементов */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section-card {
+  animation: fadeIn 0.3s ease-out forwards;
+  animation-delay: calc(var(--index, 0) * 0.1s);
+  opacity: 0;
+}
