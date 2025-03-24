@@ -7,6 +7,9 @@ import LevelSelection from './pages/LevelSelection';
 import TopicList from './pages/TopicList';
 import DeleExamSections from './pages/DeleExamSections';
 import DeleExamContent from './pages/DeleExamContent';
+import AdminPanel from './pages/AdminPanel';
+import AdminDeleSection from './pages/AdminDeleSection';
+import AdminSectionLevels from './pages/AdminSectionLevels';
 import WebApp from '@twa-dev/sdk';
 
 function App() {
@@ -28,6 +31,11 @@ function App() {
             <Route path="/:section/:level" element={<TopicList />} />
             <Route path="/dele/:level" element={<DeleExamSections />} />
             <Route path="/dele/:level/:part" element={<DeleExamContent />} />
+            <Route path="/admin" element={<AdminPanel />} />
+            <Route path="/admin/dele" element={<AdminDeleSection />} />
+            <Route path="/admin/dele/:level" element={<AdminDeleSection />} />
+            <Route path="/admin/:section" element={<AdminDeleSection />} />
+            <Route path="/admin/:section/levels" element={<AdminSectionLevels />} />
           </Routes>
         </div>
       </main>

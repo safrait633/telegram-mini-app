@@ -11,7 +11,11 @@ function Footer() {
     { id: 'grammar', label: 'Грамматика', path: '/grammar' },
     { id: 'reading', label: 'Чтение', path: '/reading' },
     { id: 'listening', label: 'Аудирование', path: '/listening' },
-    { id: 'dele', label: 'DELE', path: '/dele' }
+    { id: 'writing', label: 'Письмо', path: '/writing' },
+    { id: 'speaking', label: 'Говорение', path: '/speaking' },
+    { id: 'dele', label: 'DELE', path: '/dele' },
+    { id: 'chat', label: 'Чат', path: '/chat' },
+    { id: 'admin', label: 'Админ', path: '/admin' }
   ];
 
   return (
